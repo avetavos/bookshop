@@ -1,0 +1,40 @@
+c:\users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\bin\Debug\Bookshop.exe.config
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\bin\Debug\Bookshop.exe
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\bin\Debug\Bookshop.pdb
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.csprojResolveAssemblyReference.cache
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Admin_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Login_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Properties.Resources.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.csproj.GenerateResource.Cache
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.exe
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.pdb
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Account_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Customer_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Manage_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Client_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.Rent_Form.resources
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\bin\Debug\Bookshop.exe.manifest
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\bin\Debug\Bookshop.application
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.exe.manifest
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.application
+C:\Users\aveta\documents\visual studio 2015\Projects\Bookshop\Bookshop\obj\Debug\Bookshop.CashChange_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\bin\Debug\Bookshop.exe.config
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.exe
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.pdb
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\bin\Debug\Bookshop.exe.manifest
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\bin\Debug\Bookshop.application
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\bin\Debug\Bookshop.exe
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\bin\Debug\Bookshop.pdb
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.csprojResolveAssemblyReference.cache
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Account_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Admin_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.CashChange_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Client_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Customer_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Login_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Manage_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Properties.Resources.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Rent_Form.resources
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.csproj.GenerateResource.Cache
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.exe.manifest
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.application
