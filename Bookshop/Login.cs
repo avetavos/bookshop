@@ -27,7 +27,7 @@ namespace Bookshop
             Admin_Form admin = new Admin_Form();
             Client_Form client = new Client_Form();
 
-            string sql = "select count(*) from Customer_tbl where ID='" + id + "' and Password='" + pass + "'";
+            string sql = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "'";
 
             Sql database = new Sql();
 
@@ -43,7 +43,7 @@ namespace Bookshop
             {
                 if(dt.Rows[0][0].ToString() == "1")
                 {
-                    string sqlCheck = "select count(*) from Customer_tbl where ID='" + id + "' and Password='" + pass + "' and Role='Admin'";
+                    string sqlCheck = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "' and Role='A'";
                     DataTable dtCheck = database.DataTable(sqlCheck);
 
                     if(dtCheck.Rows[0][0].ToString() == "1")
@@ -84,7 +84,7 @@ namespace Bookshop
                 Admin_Form admin = new Admin_Form();
                 Client_Form client = new Client_Form();
 
-                string sql = "select count(*) from Customer_tbl where ID='" + id + "' and Password='" + pass + "'";
+                string sql = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "'";
 
                 Sql database = new Sql();
 
@@ -104,7 +104,7 @@ namespace Bookshop
                 {
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        string sqlCheck = "select count(*) from Customer_tbl where ID='" + id + "' and Password='" + pass + "' and Role='Admin'";
+                        string sqlCheck = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "' and Role='A'";
                         
                         DataTable dtCheck = database.DataTable(sqlCheck);
 

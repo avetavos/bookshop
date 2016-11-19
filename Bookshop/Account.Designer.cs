@@ -416,7 +416,7 @@
             this.editType_cbb.ForeColor = System.Drawing.Color.Black;
             this.editType_cbb.FormattingEnabled = true;
             this.editType_cbb.Items.AddRange(new object[] {
-            "Administator",
+            "Administrator",
             "Client"});
             this.editType_cbb.Location = new System.Drawing.Point(201, 448);
             this.editType_cbb.Name = "editType_cbb";

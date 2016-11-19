@@ -34,20 +34,20 @@ namespace Bookshop
 
             if(creGender_cbb.Text == "Male")
             {
-                gender = "Male";
+                gender = "M";
             }
             else
             {
-                gender = "Female";
+                gender = "F";
             }
 
-            if (creType_cbb.Text == "Administator")
+            if (creType_cbb.Text == "Administrator")
             {
-                type = "Admin";
+                type = "A";
             }
             else
             {
-                type = "Client";
+                type = "C";
             }
 
             if (pass != rePass || creID_txt.Text == "")
@@ -60,7 +60,7 @@ namespace Bookshop
             {
                 try
                 {
-                    string sql = "insert into Customer_tbl values ('" + id + "', '" + pass + "', '" + type + "', '" + name + "', '" + last + "', '" + gender + "')";
+                    string sql = "insert into User_tbl values ('" + id + "', '" + pass + "', '" + type + "', '" + name + "', '" + last + "', '" + gender + "')";
 
                     Sql database = new Sql();
 
@@ -79,7 +79,7 @@ namespace Bookshop
                     delAcc_cbb.Items.Clear();
                     editAcc_cbb.Items.Clear();
 
-                    string sqlDelAdd = "select ID from Customer_tbl";
+                    string sqlDelAdd = "select ID from User_tbl";
 
                     SqlDataReader reader = database.DataReader(sqlDelAdd);
 
@@ -98,7 +98,7 @@ namespace Bookshop
 
         private void Account_Form_Load(object sender, EventArgs e)
         {
-            string sql = "select ID from Customer_tbl";
+            string sql = "select ID from User_tbl";
 
             Sql database = new Sql();
 
@@ -118,7 +118,7 @@ namespace Bookshop
 
             if (delAcc == DialogResult.Yes)
             {
-                string sql = "delete from Customer_tbl where ID='" + id + "'";
+                string sql = "delete from User_tbl where ID='" + id + "'";
 
                 Sql database = new Sql();
 
@@ -127,7 +127,7 @@ namespace Bookshop
                 delAcc_cbb.Items.Clear();
                 editAcc_cbb.Items.Clear();
 
-                string sqldel = "select ID from Customer_tbl";
+                string sqldel = "select ID from User_tbl";
 
                 SqlDataReader reader = database.DataReader(sqldel);
 
@@ -146,7 +146,7 @@ namespace Bookshop
         private void editAcc_cbb_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectItem = editAcc_cbb.SelectedItem.ToString();
-            string sql = "select * from Customer_tbl where ID='" + selectItem + "'";
+            string sql = "select * from User_tbl where ID='" + selectItem + "'";
 
             Sql database = new Sql();
 
@@ -156,7 +156,7 @@ namespace Bookshop
             editName_txt.Text = dt.Rows[0][3].ToString();
             editLast_txt.Text = dt.Rows[0][4].ToString();
 
-            if (dt.Rows[0][5].ToString() == "Male")
+            if (dt.Rows[0][5].ToString() == "M")
             {
                 editGender_cbb.SelectedItem = "Male";
             }
@@ -165,7 +165,7 @@ namespace Bookshop
                 editGender_cbb.SelectedItem = "Female";
             }
 
-            if(dt.Rows[0][2].ToString() == "Admin")
+            if(dt.Rows[0][2].ToString() == "A")
             {
                 editType_cbb.SelectedItem = "Administrator";
             }
@@ -187,20 +187,20 @@ namespace Bookshop
 
             if (editGender_cbb.Text == "Male")
             {
-                gender = "Male";
+                gender = "M";
             }
             else
             {
-                gender = "Female";
+                gender = "F";
             }
 
             if (editType_cbb.Text == "Administrator")
             {
-                type = "Admin";
+                type = "A";
             }
             else
             {
-                type = "Client";
+                type = "C";
             }
 
             if (pass != rePass)
@@ -219,7 +219,7 @@ namespace Bookshop
                 {
                     try
                     {
-                        string sql = "update Customer_tbl set ID='" + id + "', Password='" + pass + "', Role='" + type + "', Name='" + name + "', Lastname='" + last + "', Gender='" + gender + "' where ID='" + id + "'";
+                        string sql = "update User_tbl set ID='" + id + "', Password='" + pass + "', Role='" + type + "', Name='" + name + "', Lastname='" + last + "', Gender='" + gender + "' where ID='" + id + "'";
 
                         Sql database = new Sql();
 
@@ -238,7 +238,7 @@ namespace Bookshop
                         delAcc_cbb.Items.Clear();
                         editAcc_cbb.Items.Clear();
 
-                        string sqldel = "select ID from Customer_tbl";
+                        string sqldel = "select ID from User_tbl";
 
                         SqlDataReader reader = database.DataReader(sqldel);
 

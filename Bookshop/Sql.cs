@@ -10,7 +10,7 @@ namespace Bookshop
 {
     class Sql
     {
-        SqlConnection con = new SqlConnection(@"Data Source=AVETAWARMACHINE\AVETAVOS;Initial Catalog=bookshop;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=QUANTUM-PC;Initial Catalog=bookshop;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
 
         public void InsertDel (string sql)
