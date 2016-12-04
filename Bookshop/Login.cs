@@ -27,7 +27,7 @@ namespace Bookshop
             Admin_Form admin = new Admin_Form();
             Client_Form client = new Client_Form();
 
-            string sql = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "'";
+            string sql = "select count(*) from Account_tbl where UserName='" + id + "' and Password='" + pass + "'";
 
             Sql database = new Sql();
 
@@ -43,7 +43,7 @@ namespace Bookshop
             {
                 if(dt.Rows[0][0].ToString() == "1")
                 {
-                    string sqlCheck = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "' and Role='A'";
+                    string sqlCheck = "select count(*) from Account_tbl where UserName='" + id + "' and Password='" + pass + "' and Role='A'";
                     DataTable dtCheck = database.DataTable(sqlCheck);
 
                     if(dtCheck.Rows[0][0].ToString() == "1")
@@ -84,7 +84,7 @@ namespace Bookshop
                 Admin_Form admin = new Admin_Form();
                 Client_Form client = new Client_Form();
 
-                string sql = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "'";
+                string sql = "select count(*) from Account_tbl where UserName='" + id + "' and Password='" + pass + "'";
 
                 Sql database = new Sql();
 
@@ -92,20 +92,15 @@ namespace Bookshop
 
                 if (id == "" || pass == "")
                 {
-                    DialogResult error = MessageBox.Show("กรุณากรอกข้อมูลให้ครับทุกช่อง", "ผิดพลาก", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    if (error == DialogResult.OK)
-                    {
-                        id_txt.Clear();
-                        pass_txt.Clear();
-                    }
+                    id_txt.Clear();
+                    pass_txt.Clear();
+                    MessageBox.Show("ผู้ใช้ หรือ รหัสผ่านไม่ถูกต้องหรุญากรอกใหม่อีกครั้ง", "ผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        string sqlCheck = "select count(*) from User_tbl where ID='" + id + "' and Password='" + pass + "' and Role='A'";
-                        
+                        string sqlCheck = "select count(*) from Account_tbl where UserName='" + id + "' and Password='" + pass + "' and Role='A'";
                         DataTable dtCheck = database.DataTable(sqlCheck);
 
                         if (dtCheck.Rows[0][0].ToString() == "1")

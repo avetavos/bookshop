@@ -29,6 +29,7 @@ namespace Bookshop
 
         private void calCash_btn_Click(object sender, EventArgs e)
         {
+
             if (rent_rdb.Checked)
             {
                 CashChange_Form cc = new CashChange_Form();

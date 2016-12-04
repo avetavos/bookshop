@@ -260,9 +260,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 24);
+            this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.label1.Text = "Username";
             // 
             // delAcc_grb
             // 
@@ -471,9 +471,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(33, 181);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(25, 24);
+            this.label16.Size = new System.Drawing.Size(86, 24);
             this.label16.TabIndex = 17;
-            this.label16.Text = "ID";
+            this.label16.Text = "Username";
             // 
             // editID_txt
             // 

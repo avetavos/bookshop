@@ -45,23 +45,23 @@ namespace Bookshop
                 string creAdd = creAdd_rtb.Text;
                 if (creGender_cbb.Text == "Male")
                 {
-                    creGender = "Male";
+                    creGender = "M";
                 }
                 else
                 {
-                    creGender = "Female";
+                    creGender = "F";
                 }
 
                 if (creType_cbb.Text == "Common")
                 {
-                    creType = "Common";
+                    creType = "C";
                 }
                 else
                 {
-                    creType = "VIP";
+                    creType = "V";
                 }
 
-                string sql = "insert into User_tbl values ('" + creName + "', '" + creLast + "', '" + creGender + "', '" + creTel + "', '" + creEmail + "', '" + creType + "', '" + creBirth + "', '" + creAdd + "')";
+                string sql = "insert into Customer_tbl values ('" + creName + "', '" + creLast + "', '" + creGender + "', '" + creTel + "', '" + creEmail + "', '" + creType + "', '" + creBirth + "', '" + creAdd + "')";
 
                 Sql database = new Sql();
 
@@ -94,23 +94,23 @@ namespace Bookshop
             string editAdd = editAdd_rtb.Text;
             if (editGender_cbb.Text == "Male")
             {
-                editGender = "Male";
+                editGender = "M";
             }
             else
             {
-                editGender = "Female";
+                editGender = "F";
             }
 
             if (editType_cbb.Text == "Common")
             {
-                editType = "Common";
+                editType = "C";
             }
             else
             {
-                editType = "VIP";
+                editType = "V";
             }
 
-            string sql = "update User_tbl set Name='" + editName + "', Lastname='" + editLast + "', Gender='" + editGender + "', Tel=" + editTel + ", Email='" + editEmail + "', Type='" + editType + "', Birth='" + editBirth + "', Address='" + editAdd + "'";
+            string sql = "update Customer_tbl set Name='" + editName + "', LastName='" + editLast + "', Gender='" + editGender + "', Phone=" + editTel + ", Email='" + editEmail + "', Type='" + editType + "', Birth='" + editBirth + "', Address='" + editAdd + "'";
 
             Sql database = new Sql();
 
@@ -126,6 +126,7 @@ namespace Bookshop
             editType_cbb.SelectedItem = null;
             editGender_cbb.SelectedItem = null;
             editAdd_rtb.Clear();
+            searchUserID_txt.Clear();
         }
 
         private void delUser_btn_Click(object sender, EventArgs e)
@@ -135,7 +136,7 @@ namespace Bookshop
             DialogResult resultDel = MessageBox.Show("Delete " + editName_txt.Text + " ?", "Delete Customer", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultDel == DialogResult.Yes)
             {
-                string sql = "delete from User_tbl where ID=" + delUser;
+                string sql = "delete from Customer_tbl where ID=" + delUser;
 
                 Sql database = new Sql();
 
@@ -150,7 +151,6 @@ namespace Bookshop
                 editGender_cbb.SelectedItem = null;
                 editAdd_rtb.Clear();
             }
-
             searchUserID_txt.Clear();
         }
 
@@ -168,7 +168,7 @@ namespace Bookshop
             try
             {
                 int temp = int.Parse(searchUserID_txt.Text);
-                string sql = "select * from User_tbl where ID=" + temp;
+                string sql = "select * from Customer_tbl where ID=" + temp;
 
                 Sql database = new Sql();
                 DataTable dt = database.DataTable(sql);
@@ -188,7 +188,7 @@ namespace Bookshop
                 editTel_txt.Text = "0" + dt.Rows[0][4].ToString();
                 editAdd_rtb.Text = dt.Rows[0][8].ToString();
 
-                if (dt.Rows[0][3].ToString() == "Male")
+                if (dt.Rows[0][3].ToString() == "M")
                 {
                     editGender_cbb.SelectedItem = "Male";
                 }
@@ -197,7 +197,7 @@ namespace Bookshop
                     editGender_cbb.SelectedItem = "Female";
                 }
 
-                if (dt.Rows[0][6].ToString() == "Common")
+                if (dt.Rows[0][6].ToString() == "C")
                 {
                     editType_cbb.SelectedItem = "Common";
                 }
