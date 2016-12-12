@@ -12,6 +12,7 @@ namespace Bookshop
 {
     public partial class CashChange_Form : Form
     {
+        public int price;
         public CashChange_Form()
         {
             InitializeComponent();
@@ -19,8 +20,7 @@ namespace Bookshop
 
         private void CashChange_Form_Load(object sender, EventArgs e)
         {
-            Rent_Form cash = new Rent_Form();
-            totalCash_lbl.Text = (cash.cash()).ToString();
+            totalCash_lbl.Text = price.ToString();
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
@@ -30,12 +30,7 @@ namespace Bookshop
 
         private void calCash_btn_Click(object sender, EventArgs e)
         {
-            Rent_Form rent = new Rent_Form();
-            DataTable dt = (DataTable)(rent.rentBook_dgv.DataSource);
 
-            int rows = dt.Rows.Count;
-            //string cusID = dt.Rows[]
-            //string sql = "insert into Rent_tbl (CustomerID, Bookname, Volume, Date) values (" + 
         }
     }
 }

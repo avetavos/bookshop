@@ -42,62 +42,63 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.label1.Location = new System.Drawing.Point(14, 26);
+            this.label1.Location = new System.Drawing.Point(17, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 24);
+            this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ค่าเช่าหนังสือรวมทั้งสิ้น";
+            this.label1.Text = "Total price.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.label2.Location = new System.Drawing.Point(365, 26);
+            this.label2.Location = new System.Drawing.Point(362, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 24);
+            this.label2.Size = new System.Drawing.Size(44, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "บาท";
+            this.label2.Text = "Baht";
             // 
             // totalCash_lbl
             // 
             this.totalCash_lbl.AutoSize = true;
             this.totalCash_lbl.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.totalCash_lbl.Location = new System.Drawing.Point(276, 26);
+            this.totalCash_lbl.Location = new System.Drawing.Point(347, 26);
             this.totalCash_lbl.Name = "totalCash_lbl";
             this.totalCash_lbl.Size = new System.Drawing.Size(0, 24);
             this.totalCash_lbl.TabIndex = 2;
-            this.totalCash_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.totalCash_lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.label3.Location = new System.Drawing.Point(14, 105);
+            this.label3.Location = new System.Drawing.Point(17, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 24);
+            this.label3.Size = new System.Drawing.Size(47, 24);
             this.label3.TabIndex = 3;
-            this.label3.Text = "ลูกค้าชำระเงินจำนวน";
+            this.label3.Text = "Cash";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.label4.Location = new System.Drawing.Point(365, 105);
+            this.label4.Location = new System.Drawing.Point(362, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 24);
+            this.label4.Size = new System.Drawing.Size(44, 24);
             this.label4.TabIndex = 4;
-            this.label4.Text = "บาท";
+            this.label4.Text = "Baht";
             // 
             // change_txt
             // 
             this.change_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.change_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.change_txt.Font = new System.Drawing.Font("Prompt Light", 12F);
-            this.change_txt.Location = new System.Drawing.Point(203, 105);
+            this.change_txt.Location = new System.Drawing.Point(150, 105);
             this.change_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.change_txt.Name = "change_txt";
-            this.change_txt.Size = new System.Drawing.Size(131, 25);
+            this.change_txt.Size = new System.Drawing.Size(197, 25);
             this.change_txt.TabIndex = 5;
+            this.change_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // calCash_btn
             // 
@@ -110,13 +111,13 @@
             this.calCash_btn.Name = "calCash_btn";
             this.calCash_btn.Size = new System.Drawing.Size(189, 50);
             this.calCash_btn.TabIndex = 6;
-            this.calCash_btn.Text = "คิดเงิน";
+            this.calCash_btn.Text = "Change";
             this.calCash_btn.UseVisualStyleBackColor = false;
             this.calCash_btn.Click += new System.EventHandler(this.calCash_btn_Click);
             // 
             // cancel_btn
             // 
-            this.cancel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cancel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cancel_btn.FlatAppearance.BorderSize = 0;
             this.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel_btn.Font = new System.Drawing.Font("Prompt Light", 12F);
@@ -125,7 +126,7 @@
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.Size = new System.Drawing.Size(189, 50);
             this.cancel_btn.TabIndex = 7;
-            this.cancel_btn.Text = "ยกเลิก";
+            this.cancel_btn.Text = "Cancel";
             this.cancel_btn.UseVisualStyleBackColor = false;
             this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 

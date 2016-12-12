@@ -74,6 +74,15 @@ namespace Bookshop
             login.Visible = true;
         }
 
+        private void history_btn_Click(object sender, EventArgs e)
+        {
+            History_Form history = new History_Form();
+            history.TopLevel = false;
+            history.AutoScroll = true;
+            this.show_panel.Controls.Add(history);
+            history.Show();
+        }
+
         private void Admin_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Sql database = new Sql();

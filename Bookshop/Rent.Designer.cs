@@ -96,6 +96,8 @@
             this.rentBook_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.rentBook_dgv.Size = new System.Drawing.Size(639, 485);
             this.rentBook_dgv.TabIndex = 0;
+            this.rentBook_dgv.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.rentBook_dgv_RowsAdded);
+            this.rentBook_dgv.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.rentBook_dgv_RowsRemoved);
             // 
             // No
             // 
@@ -160,6 +162,7 @@
             // delData
             // 
             this.delData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.delData.Enabled = false;
             this.delData.FlatAppearance.BorderSize = 0;
             this.delData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delData.Font = new System.Drawing.Font("Prompt Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));

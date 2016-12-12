@@ -72,7 +72,7 @@
             this.customer_btn.Name = "customer_btn";
             this.customer_btn.Size = new System.Drawing.Size(167, 55);
             this.customer_btn.TabIndex = 1;
-            this.customer_btn.Text = "   Customer";
+            this.customer_btn.Text = "  Member";
             this.customer_btn.UseVisualStyleBackColor = false;
             this.customer_btn.Click += new System.EventHandler(this.customer_btn_Click);
             // 
@@ -91,6 +91,7 @@
             this.history_btn.TabIndex = 2;
             this.history_btn.Text = "History";
             this.history_btn.UseVisualStyleBackColor = false;
+            this.history_btn.Click += new System.EventHandler(this.history_btn_Click);
             // 
             // store_btn
             // 

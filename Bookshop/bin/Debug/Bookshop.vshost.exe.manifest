@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bookshop.exe" size="710624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bookshop.exe" size="827872">
       <assemblyIdentity name="Bookshop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MFtYpfXyM43HtCPoRcPRLPFymJCTSN7jzd2G4MZTZ54=</dsig:DigestValue>
+        <dsig:DigestValue>/3zKXUUUU2ep2xbhrPjE0yuvkyUaOVHDyV/Q29nN5tU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Bookshop.exe.config" size="189">
+  <file name="Bookshop.exe.config" size="528">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+      <dsig:DigestValue>u3wujP3Bjv43S3yRRXrayaQgWzptrrAX7Wqr3VJJ+6o=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

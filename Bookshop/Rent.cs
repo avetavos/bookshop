@@ -13,8 +13,6 @@ namespace Bookshop
 {
     public partial class Rent_Form : Form
     {
-        int totalPrice;
-
         public Rent_Form()
         {
             InitializeComponent();
@@ -28,12 +26,12 @@ namespace Bookshop
             {
                 CashChange_Form cc = new CashChange_Form();
                 cc.Show();
-                
+                int price = 0;
                 for (int i = 0; i < rentBook_dgv.Rows.Count; i++)
                 {
-                    int temp = int.Parse(rentBook_dgv.Rows[i].Cells[3].ToString());
-                    totalPrice += temp;
+                    price += int.Parse(rentBook_dgv.Rows[i].Cells[3].Value.ToString());
                 }
+                cc.price = price;
             }
         }
 
@@ -118,7 +116,7 @@ namespace Bookshop
 
                             DataTable dtBook = database.DataTable(sqlBook);
 
-                            if (dtBook.Rows[0][3].ToString() == "Available")
+                            if (dtBook.Rows[0][3].ToString() == "A")
                             {
                                 rentBook_dgv.Rows.Add();
                                 rentBook_dgv.Rows[rows].Cells[0].Value = rows + 1;
@@ -129,7 +127,6 @@ namespace Bookshop
 
                                 string status = "update Store_tbl set Status='N' where ID=" + bookID;
                                 database.InsertDel(status);
-
                             }
                             else
                             {
@@ -160,7 +157,7 @@ namespace Bookshop
                                 rentBook_dgv.Rows[rows].Cells[3].Value = int.Parse(dtBook.Rows[0][2].ToString()) / 10;
                                 rentBook_dgv.Rows[rows].Cells[4].Value = dtBook.Rows[0][4].ToString();
 
-                                string status = "update Book_tbl set Status='N' where ID=" + bookID;
+                                string status = "update Store_tbl set Status = 'N' where ID = " + bookID;
                                 database.InsertDel(status);
                             }
                             else
@@ -186,9 +183,17 @@ namespace Bookshop
             }
         }
 
-        public int cash ()
+        private void rentBook_dgv_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            return totalPrice;
+            delData.Enabled = true;
+        }
+
+        private void rentBook_dgv_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            if (rentBook_dgv.Rows.Count <= 0)
+            {
+                delData.Enabled = false;
+            }
         }
     }
 }

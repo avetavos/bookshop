@@ -38,3 +38,4 @@ C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.Rent_Form.r
 C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.csproj.GenerateResource.Cache
 C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.exe.manifest
 C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.application
+C:\Users\aveta\Documents\GitHub\bookshop\Bookshop\obj\Debug\Bookshop.History_Form.resources

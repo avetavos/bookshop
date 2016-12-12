@@ -93,6 +93,36 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookShopDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookShopDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookShopDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookShopDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BookShopDataSetBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookShopDataSetBook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CashChange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +140,12 @@
     </Compile>
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -147,6 +183,9 @@
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +204,72 @@
     <EmbeddedResource Include="Rent.resx">
       <DependentUpon>Rent.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BookShopDataSet.xsc">
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet.xss">
+      <DependentUpon>BookShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet1.xsc">
+      <DependentUpon>BookShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet1.xss">
+      <DependentUpon>BookShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet2.xsc">
+      <DependentUpon>BookShopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet2.xss">
+      <DependentUpon>BookShopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet3.xsc">
+      <DependentUpon>BookShopDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet3.xss">
+      <DependentUpon>BookShopDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet4.xsc">
+      <DependentUpon>BookShopDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSet4.xss">
+      <DependentUpon>BookShopDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSetBook.xsc">
+      <DependentUpon>BookShopDataSetBook.xsd</DependentUpon>
+    </None>
+    <None Include="BookShopDataSetBook.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookShopDataSetBook.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookShopDataSetBook.xss">
+      <DependentUpon>BookShopDataSetBook.xsd</DependentUpon>
+    </None>
     <None Include="Bookshop_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
