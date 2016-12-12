@@ -38,7 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.exit_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -131,9 +130,9 @@
             // 
             this.show_panel.AllowDrop = true;
             this.show_panel.AutoSize = true;
-            this.show_panel.Location = new System.Drawing.Point(167, 58);
+            this.show_panel.Location = new System.Drawing.Point(168, 59);
             this.show_panel.Name = "show_panel";
-            this.show_panel.Size = new System.Drawing.Size(1199, 710);
+            this.show_panel.Size = new System.Drawing.Size(1198, 710);
             this.show_panel.TabIndex = 7;
             // 
             // panel1
@@ -167,24 +166,6 @@
             this.panel2.Size = new System.Drawing.Size(167, 1080);
             this.panel2.TabIndex = 9;
             // 
-            // exit_btn
-            // 
-            this.exit_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.exit_btn.BackColor = System.Drawing.Color.Red;
-            this.exit_btn.FlatAppearance.BorderSize = 0;
-            this.exit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_btn.Font = new System.Drawing.Font("Prompt Light", 14F);
-            this.exit_btn.ForeColor = System.Drawing.Color.White;
-            this.exit_btn.Image = ((System.Drawing.Image)(resources.GetObject("exit_btn.Image")));
-            this.exit_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exit_btn.Location = new System.Drawing.Point(-1, 714);
-            this.exit_btn.Name = "exit_btn";
-            this.exit_btn.Size = new System.Drawing.Size(167, 55);
-            this.exit_btn.TabIndex = 6;
-            this.exit_btn.Text = "Exit";
-            this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
-            // 
             // logout_btn
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -195,7 +176,7 @@
             this.logout_btn.ForeColor = System.Drawing.Color.White;
             this.logout_btn.Image = ((System.Drawing.Image)(resources.GetObject("logout_btn.Image")));
             this.logout_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logout_btn.Location = new System.Drawing.Point(-1, 659);
+            this.logout_btn.Location = new System.Drawing.Point(0, 713);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(167, 55);
             this.logout_btn.TabIndex = 5;
@@ -210,9 +191,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.logout_btn);
-            this.Controls.Add(this.exit_btn);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.show_panel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.rent_btn);
             this.Controls.Add(this.store_btn);
             this.Controls.Add(this.history_btn);
@@ -225,6 +205,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Admin_Form_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -244,6 +225,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.Button exit_btn;
     }
 }

@@ -13,7 +13,7 @@ namespace Bookshop
 {
     public partial class Rent_Form : Form
     {
-        int totalPrice = 0;
+        int totalPrice;
 
         public Rent_Form()
         {
@@ -22,20 +22,18 @@ namespace Bookshop
             rentBook_dgv.Columns[4].Visible = false;
         }
 
-        private void confirm_btn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void calCash_btn_Click(object sender, EventArgs e)
         {
-
             if (rent_rdb.Checked)
             {
                 CashChange_Form cc = new CashChange_Form();
-                cc.getPrice(totalPrice);
-                //cc.calCash_btn_Click(rentBook_dgv);
                 cc.Show();
+                
+                for (int i = 0; i < rentBook_dgv.Rows.Count; i++)
+                {
+                    int temp = int.Parse(rentBook_dgv.Rows[i].Cells[3].ToString());
+                    totalPrice += temp;
+                }
             }
         }
 
@@ -47,14 +45,9 @@ namespace Bookshop
         private void delData_Click(object sender, EventArgs e)
         {
             string ID = rentBook_dgv.SelectedRows[0].Cells[4].Value.ToString();
-            string status = "update Book_tbl set Status='Available' where ID=" + ID;
-
+            string status = "update Store_tbl set Status='A' where ID=" + ID;
             Sql database = new Sql();
-
             database.InsertDel(status);
-
-            int temp = int.Parse(rentBook_dgv.SelectedRows[0].Cells[3].Value.ToString());
-            totalPrice -= temp;
 
             rentBook_dgv.Rows.RemoveAt(rentBook_dgv.SelectedRows[0].Index);
 
@@ -75,7 +68,7 @@ namespace Bookshop
             try
             {
                 string ID = searchCus_txt.Text;
-                string sql = "select Name, Lastname, Type from User_tbl where ID=" + ID;
+                string sql = "select Name, Lastname, Type from Customer_tbl where ID=" + ID;
 
                 Sql database = new Sql();
 
@@ -83,7 +76,7 @@ namespace Bookshop
 
                 showName_txt.Text = dt.Rows[0][0].ToString() + "  " + dt.Rows[0][1].ToString();
 
-                if (dt.Rows[0][2].ToString() == "Common")
+                if (dt.Rows[0][2].ToString() == "C")
                 {
                     showType_txt.Text = "Common";
                 }
@@ -108,7 +101,7 @@ namespace Bookshop
                 {
                     string bookID = searchBook_txt.Text;
 
-                    string sql = "select count(*) from Book_tbl where ID=" + bookID;
+                    string sql = "select count(*) from Store_tbl where ID=" + bookID;
 
                     Sql database = new Sql();
 
@@ -121,7 +114,7 @@ namespace Bookshop
                     {
                         if (rows < 5)
                         {
-                            string sqlBook = "select Bookname, Volume, Price, Status, ID from Book_tbl where ID =" + bookID;
+                            string sqlBook = "select Bookname, Volume, Price, Status, ID from Store_tbl where ID =" + bookID;
 
                             DataTable dtBook = database.DataTable(sqlBook);
 
@@ -134,10 +127,9 @@ namespace Bookshop
                                 rentBook_dgv.Rows[rows].Cells[3].Value = int.Parse(dtBook.Rows[0][2].ToString()) / 10;
                                 rentBook_dgv.Rows[rows].Cells[4].Value = dtBook.Rows[0][4].ToString();
 
-                                string status = "update Book_tbl set Status='Not Available' where ID=" + bookID;
+                                string status = "update Store_tbl set Status='N' where ID=" + bookID;
                                 database.InsertDel(status);
 
-                                totalPrice += int.Parse(rentBook_dgv.Rows[rows].Cells[3].Value.ToString());
                             }
                             else
                             {
@@ -155,11 +147,11 @@ namespace Bookshop
                     {
                         if (rows < 10)
                         {
-                            string sqlBook = "select Bookname, Volume, Price, Status, ID from Book_tbl where ID =" + bookID;
+                            string sqlBook = "select Bookname, Volume, Price, Status, ID from Store_tbl where ID =" + bookID;
 
                             DataTable dtBook = database.DataTable(sqlBook);
 
-                            if (dtBook.Rows[0][3].ToString() == "Available")
+                            if (dtBook.Rows[0][3].ToString() == "A")
                             {
                                 rentBook_dgv.Rows.Add();
                                 rentBook_dgv.Rows[rows].Cells[0].Value = rows + 1;
@@ -168,10 +160,8 @@ namespace Bookshop
                                 rentBook_dgv.Rows[rows].Cells[3].Value = int.Parse(dtBook.Rows[0][2].ToString()) / 10;
                                 rentBook_dgv.Rows[rows].Cells[4].Value = dtBook.Rows[0][4].ToString();
 
-                                string status = "update Book_tbl set Status='Not Available' where ID=" + bookID;
+                                string status = "update Book_tbl set Status='N' where ID=" + bookID;
                                 database.InsertDel(status);
-
-                                totalPrice += int.Parse(rentBook_dgv.Rows[rows].Cells[3].Value.ToString());
                             }
                             else
                             {
@@ -185,7 +175,7 @@ namespace Bookshop
                         }
                     }
 
-                    searchBook_txt.Clear();
+                    searchBook_txt.Text = "";
 
                 }
 
@@ -194,6 +184,11 @@ namespace Bookshop
                     return;
                 }
             }
+        }
+
+        public int cash ()
+        {
+            return totalPrice;
         }
     }
 }

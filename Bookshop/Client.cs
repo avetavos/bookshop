@@ -12,6 +12,7 @@ namespace Bookshop
 {
     public partial class Client_Form : Form
     {
+        public string id, pass;
         public Client_Form()
         {
             InitializeComponent();
@@ -54,6 +55,20 @@ namespace Bookshop
         private void exit_btn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Client_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Sql database = new Sql();
+            string getData = "select * from Account_tbl where UserName='" + id + "' and Password='" + pass + "'";
+            DataTable loginData = database.DataTable(getData);
+            string username = loginData.Rows[0][1].ToString();
+            string name = loginData.Rows[0][4].ToString();
+            string lastname = loginData.Rows[0][5].ToString();
+            string date = DateTime.Now.ToString("(HH.mm) dd-MM-yyyy");
+
+            string loginUpdate = "insert into Login_tbl values ('" + username + "', '" + name + "', '" + lastname + "', 'Client', '" + date + "', 'Logout')";
+            database.InsertDel(loginUpdate);
         }
     }
 }

@@ -19,12 +19,8 @@ namespace Bookshop
 
         private void CashChange_Form_Load(object sender, EventArgs e)
         {
-        
-        }
-
-        public void getPrice (int price)
-        {
-            totalCash_lbl.Text = price.ToString();
+            Rent_Form cash = new Rent_Form();
+            totalCash_lbl.Text = (cash.cash()).ToString();
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)

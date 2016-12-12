@@ -29,7 +29,7 @@ namespace Bookshop
                 string crePublish = crePublish_txt.Text;
                 string creAuthor = creAuthor_txt.Text;
 
-                string sql = "insert into Book_tbl values ('" + creBook + "', " + creVol + ", " + crePrice + ", '" + crePublish + "', '" + creAuthor + "', 'Available')";
+                string sql = "insert into Store_tbl values ('" + creBook + "', " + creVol + ", " + crePrice + ", '" + crePublish + "', '" + creAuthor + "', 'A')";
 
                 for (int i = 0; i < creValue; i++)
                 {
@@ -68,7 +68,7 @@ namespace Bookshop
                 string editPub = editPublish_txt.Text;
                 string editAuth = editAuthor_txt.Text;
 
-                string sql = "update Book_tbl set Bookname='" + editBook + "', Volume=" + editVol + ", Price=" + editPrice + ", Publisher='" + editPub + "', Author='" + editAuth + "' where ID=" + ID;
+                string sql = "update Store_tbl set Bookname='" + editBook + "', Volume=" + editVol + ", Price=" + editPrice + ", Publisher='" + editPub + "', Author='" + editAuth + "' where ID=" + ID;
 
                 Sql database = new Sql();
 
@@ -97,7 +97,7 @@ namespace Bookshop
                 if (del == DialogResult.Yes)
                 {
                     string name = editBook_txt.Text;
-                    string sql = "delete from Book_tbl where Bookname='" + name + "'";
+                    string sql = "delete from Store_tbl where Bookname='" + name + "'";
 
                     Sql database = new Sql();
 
@@ -128,7 +128,7 @@ namespace Bookshop
             try
             {
                 string searchBook = searchBookID_txt.Text;
-                string sql = "select * from Book_tbl where ID=" + searchBook;
+                string sql = "select * from Store_tbl where ID=" + searchBook;
 
                 Sql database = new Sql();
 

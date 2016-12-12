@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Bookshop
 {
     public partial class Admin_Form : Form
     {
+        public string id, pass;
         public Admin_Form()
         {
             InitializeComponent();
@@ -69,6 +72,20 @@ namespace Bookshop
             this.Close();
             Login_Form login = new Login_Form();
             login.Visible = true;
+        }
+
+        private void Admin_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Sql database = new Sql();
+            string getData = "select * from Account_tbl where UserName='" + id + "' and Password='" + pass + "'";
+            DataTable loginData = database.DataTable(getData);
+            string username = loginData.Rows[0][1].ToString();
+            string name = loginData.Rows[0][4].ToString();
+            string lastname = loginData.Rows[0][5].ToString();
+            string date = DateTime.Now.ToString("(HH.mm) dd-MM-yyyy");
+
+            string loginUpdate = "insert into Login_tbl values ('" + username + "', '" + name + "', '" + lastname + "', 'Administrator', '" + date + "', 'Logout')";
+            database.InsertDel(loginUpdate);
         }
     }
 }

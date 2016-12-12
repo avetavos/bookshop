@@ -155,11 +155,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox id_txt;
-        private System.Windows.Forms.TextBox pass_txt;
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.PictureBox pictureLog;
+        public System.Windows.Forms.TextBox id_txt;
+        public System.Windows.Forms.TextBox pass_txt;
     }
 }
 
